@@ -1,0 +1,292 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DiodrumArabic-Bold
+FamilyName:DiodrumArabic-Bold
+StyleName:☞
+FullName:☞Diodrum Arabic Bold
+MenuName:DiodrumArabic-Bold
+StyleBits:2
+FamilyNameNative:DiodrumArabic-Bold
+StyleNameNative:☞
+FullNameNative:DiodrumArabic-Bold ☞
+WritingScript:Arabic
+OutlineFileName:D:\admin panel\Font\DiodrumArabic-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:165140
+FileModTime:1467452876
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Diodrum Arabic Bold
+NameArray:0,Win,1,DiodrumArabic-Bold
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DiodrumArabic-Extralight
+FamilyName:DiodrumArabic-Extralight
+StyleName:☞
+FullName:☞Diodrum Arabic Extralight
+MenuName:DiodrumArabic-Extralight
+StyleBits:0
+FamilyNameNative:DiodrumArabic-Extralight
+StyleNameNative:☞
+FullNameNative:DiodrumArabic-Extralight ☞
+WritingScript:Arabic
+OutlineFileName:D:\admin panel\Font\DiodrumArabic-Extralight.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:175208
+FileModTime:1467452834
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Diodrum Arabic Extralight
+NameArray:0,Win,1,DiodrumArabic-Extralight
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DiodrumArabic-Light
+FamilyName:DiodrumArabic-Light
+StyleName:☞
+FullName:☞Diodrum Arabic Light
+MenuName:DiodrumArabic-Light
+StyleBits:0
+FamilyNameNative:DiodrumArabic-Light
+StyleNameNative:☞
+FullNameNative:DiodrumArabic-Light ☞
+WritingScript:Arabic
+OutlineFileName:D:\admin panel\Font\DiodrumArabic-Light.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:181164
+FileModTime:1467452834
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Diodrum Arabic Light
+NameArray:0,Win,1,DiodrumArabic-Light
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DiodrumArabic-Medium
+FamilyName:DiodrumArabic-Medium
+StyleName:☞
+FullName:☞Diodrum Arabic Medium
+MenuName:DiodrumArabic-Medium
+StyleBits:0
+FamilyNameNative:DiodrumArabic-Medium
+StyleNameNative:☞
+FullNameNative:DiodrumArabic-Medium ☞
+WritingScript:Arabic
+OutlineFileName:D:\admin panel\Font\DiodrumArabic-Medium.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:175688
+FileModTime:1467452874
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Diodrum Arabic Medium
+NameArray:0,Win,1,DiodrumArabic-Medium
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DiodrumArabic-Regular
+FamilyName:DiodrumArabic-Regular
+StyleName:☞
+FullName:☞Diodrum Arabic
+MenuName:DiodrumArabic-Regular
+StyleBits:0
+FamilyNameNative:DiodrumArabic-Regular
+StyleNameNative:☞
+FullNameNative:DiodrumArabic-Regular ☞
+WritingScript:Arabic
+OutlineFileName:D:\admin panel\Font\DiodrumArabic-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:178260
+FileModTime:1467452834
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Diodrum Arabic
+NameArray:0,Win,1,DiodrumArabic-Regular
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DiodrumArabic-Semibold
+FamilyName:DiodrumArabic-Semibold
+StyleName:☞
+FullName:☞Diodrum Arabic Semibold
+MenuName:DiodrumArabic-Semibold
+StyleBits:2
+FamilyNameNative:DiodrumArabic-Semibold
+StyleNameNative:☞
+FullNameNative:DiodrumArabic-Semibold ☞
+WritingScript:Arabic
+OutlineFileName:D:\admin panel\Font\DiodrumArabic-Semibold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:173316
+FileModTime:1467452874
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Diodrum Arabic Semibold
+NameArray:0,Win,1,DiodrumArabic-Semibold
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:IRANSansWebFaNum
+FamilyName:IRANSansWeb(FaNum)
+StyleName:Regular
+FullName:IRANSansWeb(FaNum)
+MenuName:IRANSansWeb(FaNum)
+StyleBits:0
+FamilyNameNative:IRANSansWeb(FaNum)
+StyleNameNative:Regular
+FullNameNative:IRANSansWeb(FaNum) Regular
+WritingScript:Arabic
+OutlineFileName:D:\admin panel\Font\IRANSansWeb(FaNum).ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:59524
+FileModTime:1459668798
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,IRANSansWeb(FaNum)
+NameArray:0,Win,1,IRANSansWeb(FaNum)
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:IRANSansWebFaNum-Bold
+FamilyName:IRANSansWeb(FaNum)
+StyleName:Bold
+FullName:IRANSansWeb(FaNum) Bold
+MenuName:IRANSansWeb(FaNum)
+StyleBits:2
+FamilyNameNative:IRANSansWeb(FaNum)
+StyleNameNative:Bold
+FullNameNative:IRANSansWeb(FaNum) Bold
+WritingScript:Arabic
+OutlineFileName:D:\admin panel\Font\IRANSansWeb(FaNum)_Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:57256
+FileModTime:1459668798
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,IRANSansWeb(FaNum) Bold
+NameArray:0,Win,1,IRANSansWeb(FaNum)
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:IRANSansWebFaNum-Light
+FamilyName:IRANSansWeb(FaNum)
+StyleName:Light
+FullName:IRANSansWeb(FaNum) Light
+MenuName:IRANSansWeb(FaNum) Light
+StyleBits:0
+FamilyNameNative:IRANSansWeb(FaNum)
+StyleNameNative:Light
+FullNameNative:IRANSansWeb(FaNum) Light
+WritingScript:Arabic
+OutlineFileName:D:\admin panel\Font\IRANSansWeb(FaNum)_Light.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:60576
+FileModTime:1459668798
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,IRANSansWeb(FaNum) Light
+NameArray:0,Win,1,IRANSansWeb(FaNum) Light
+NameArray:0,Win,16,IRANSansWeb(FaNum)
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:IRANSansWebFaNum-Medium
+FamilyName:IRANSansWeb(FaNum)
+StyleName:Medium
+FullName:IRANSansWeb(FaNum) Medium
+MenuName:IRANSansWeb(FaNum) Medium
+StyleBits:0
+FamilyNameNative:IRANSansWeb(FaNum)
+StyleNameNative:Medium
+FullNameNative:IRANSansWeb(FaNum) Medium
+WritingScript:Arabic
+OutlineFileName:D:\admin panel\Font\IRANSansWeb(FaNum)_Medium.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:58192
+FileModTime:1459668798
+WeightClass:500
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,IRANSansWeb(FaNum) Medium
+NameArray:0,Win,1,IRANSansWeb(FaNum) Medium
+NameArray:0,Win,16,IRANSansWeb(FaNum)
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:IRANSansWebFaNum-UltraLight
+FamilyName:IRANSansWeb(FaNum)
+StyleName:UltraLight
+FullName:IRANSansWeb(FaNum) UltraLight
+MenuName:IRANSansWeb(FaNum) UltraLight
+StyleBits:0
+FamilyNameNative:IRANSansWeb(FaNum)
+StyleNameNative:UltraLight
+FullNameNative:IRANSansWeb(FaNum) UltraLight
+WritingScript:Arabic
+OutlineFileName:D:\admin panel\Font\IRANSansWeb(FaNum)_UltraLight.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:56352
+FileModTime:1459668798
+WeightClass:200
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,IRANSansWeb(FaNum) UltraLight
+NameArray:0,Win,1,IRANSansWeb(FaNum) UltraLight
+NameArray:0,Win,16,IRANSansWeb(FaNum)
+%EndFont
+

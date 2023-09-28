@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: admin-panel-farsi;
+    src: url("font/Mikhak-Bold.ttf") ;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.LogInContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.LogInForm {
+    background: linear-gradient(134deg, rgb(24, 32, 46) 25%, rgba(9, 12, 17, 1) 100%);;
+    padding: 20px 40px;
+    display: grid;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: -8px -3px 27px rgb(10, 11, 37);
+    font-family: iranian-sanse;
+}
+
+.LogInForm div label {
+    position: relative;
+    display: block;
+    color: rgb(255, 233, 245);
+    padding: 22px 22px 0 22px;
+    font-size: 15px;
+    direction: rtl;
+    margin-bottom: 5px;
+    margin-right: 13px;
+    font-family: admin-panel-farsi;
+}
+
+
+.LogInForm div input {
+    margin: 0 20px;
+    width: 250px;
+    border: 0.7px solid rgb(199, 199, 199);
+    background: linear-gradient(292deg, rgb(17, 23, 34) -46%, rgba(9, 12, 17, 1) 100%);;
+    border-radius: 6px;
+    height: 27px;
+    color: white;
+    padding: 5px;
+}
+
+
+.button2 , .button1 {
+    margin: 40px 20px 20px 20px;
+    color: white;
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 10px;
+    background: linear-gradient(292deg, rgba(17, 23, 34, 0.6) -46%, rgba(9, 12, 17, 1) 100%);;
+    cursor: pointer;
+    font-family: iranian-sanse;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: admin-panel-farsi;
+}
+
+.button1{
+    filter: opacity(0.5);
+}
+
+.button2 {
+
+    margin: 20px auto;
+}
+

@@ -1,0 +1,159 @@
+%!Adobe-FontList 1.22
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DiodrumArabic-Bold
+FamilyName:DiodrumArabic-Bold
+StyleName:☞
+FullName:☞Diodrum Arabic Bold
+MenuName:DiodrumArabic-Bold
+StyleBits:2
+FamilyNameNative:DiodrumArabic-Bold
+StyleNameNative:☞
+FullNameNative:DiodrumArabic-Bold ☞
+WritingScript:Arabic
+OutlineFileName:C:\Users\Aslani\Documents\admin panel\Font\DiodrumArabic-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:165140
+FileModTime:1467456476
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Diodrum Arabic Bold
+NameArray:0,Win,1,DiodrumArabic-Bold
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DiodrumArabic-Extralight
+FamilyName:DiodrumArabic-Extralight
+StyleName:☞
+FullName:☞Diodrum Arabic Extralight
+MenuName:DiodrumArabic-Extralight
+StyleBits:0
+FamilyNameNative:DiodrumArabic-Extralight
+StyleNameNative:☞
+FullNameNative:DiodrumArabic-Extralight ☞
+WritingScript:Arabic
+OutlineFileName:C:\Users\Aslani\Documents\admin panel\Font\DiodrumArabic-Extralight.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:175208
+FileModTime:1467456434
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Diodrum Arabic Extralight
+NameArray:0,Win,1,DiodrumArabic-Extralight
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DiodrumArabic-Light
+FamilyName:DiodrumArabic-Light
+StyleName:☞
+FullName:☞Diodrum Arabic Light
+MenuName:DiodrumArabic-Light
+StyleBits:0
+FamilyNameNative:DiodrumArabic-Light
+StyleNameNative:☞
+FullNameNative:DiodrumArabic-Light ☞
+WritingScript:Arabic
+OutlineFileName:C:\Users\Aslani\Documents\admin panel\Font\DiodrumArabic-Light.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:181164
+FileModTime:1467456434
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Diodrum Arabic Light
+NameArray:0,Win,1,DiodrumArabic-Light
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DiodrumArabic-Medium
+FamilyName:DiodrumArabic-Medium
+StyleName:☞
+FullName:☞Diodrum Arabic Medium
+MenuName:DiodrumArabic-Medium
+StyleBits:0
+FamilyNameNative:DiodrumArabic-Medium
+StyleNameNative:☞
+FullNameNative:DiodrumArabic-Medium ☞
+WritingScript:Arabic
+OutlineFileName:C:\Users\Aslani\Documents\admin panel\Font\DiodrumArabic-Medium.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:175688
+FileModTime:1467456474
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Diodrum Arabic Medium
+NameArray:0,Win,1,DiodrumArabic-Medium
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DiodrumArabic-Regular
+FamilyName:DiodrumArabic-Regular
+StyleName:☞
+FullName:☞Diodrum Arabic
+MenuName:DiodrumArabic-Regular
+StyleBits:0
+FamilyNameNative:DiodrumArabic-Regular
+StyleNameNative:☞
+FullNameNative:DiodrumArabic-Regular ☞
+WritingScript:Arabic
+OutlineFileName:C:\Users\Aslani\Documents\admin panel\Font\DiodrumArabic-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:178260
+FileModTime:1467456434
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Diodrum Arabic
+NameArray:0,Win,1,DiodrumArabic-Regular
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DiodrumArabic-Semibold
+FamilyName:DiodrumArabic-Semibold
+StyleName:☞
+FullName:☞Diodrum Arabic Semibold
+MenuName:DiodrumArabic-Semibold
+StyleBits:2
+FamilyNameNative:DiodrumArabic-Semibold
+StyleNameNative:☞
+FullNameNative:DiodrumArabic-Semibold ☞
+WritingScript:Arabic
+OutlineFileName:C:\Users\Aslani\Documents\admin panel\Font\DiodrumArabic-Semibold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:173316
+FileModTime:1467456474
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Diodrum Arabic Semibold
+NameArray:0,Win,1,DiodrumArabic-Semibold
+%EndFont
+
