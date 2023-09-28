@@ -6,14 +6,18 @@ import {GrInProgress} from "react-icons/gr";
 import {IoCheckmarkDoneCircleSharp} from "react-icons/io5";
 import {GiElectricalResistance} from "react-icons/gi";
 import {BsCardChecklist} from "react-icons/bs";
+import useWindowDimensions from "./useWindowDimensions";
+import {AiFillHome} from "react-icons/ai";
 
 function SideBar(props) {
+
+    const {height, width} = useWindowDimensions();
 
 
     return (
         <>
             <div id="nav-bar">
-                <input id="nav-toggle" type="checkbox" onChange={(event) => {
+                <input id="nav-toggle" type="checkbox" defaultChecked={width < 900} onChange={(event) => {
                     props.onSetSideNavW(event.currentTarget.checked);
                 }}/>
                 <div id="nav-header">
@@ -27,6 +31,12 @@ function SideBar(props) {
                 </div>
                 <div id="nav-content">
                     <>
+                        <div className="nav-button"    onClick={() => {
+                            props.onSetSideNavTest("");
+                        }}>
+                            <i className="fas "> <AiFillHome /></i>
+                            <span>داشبورد</span>
+                        </div>
                         <div className="nav-button">
                             <i className="fas "> <PiElevatorFill/></i>
                             <span>آسانسور</span>

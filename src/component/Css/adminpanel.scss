@@ -101,7 +101,7 @@ input[type=number] {
     grid-gap: 10px;
 
     .Items {
-     width: 230px;
+      width: 230px;
       margin: auto;
       color: #FFFFFF;
       font-family: kalamehMedium;
@@ -127,6 +127,8 @@ input[type=number] {
   }
 
   .MainItem {
+    margin: 30px 0;
+
     h3 {
       color: #FFFFFF;
       width: fit-content;
@@ -1540,6 +1542,7 @@ $in-w: $n-char*($char-w + $gap);
 
     .topItems {
       grid-template-columns: auto auto;
+
       .Items {
 
         &:after {
@@ -1559,7 +1562,7 @@ $in-w: $n-char*($char-w + $gap);
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 
   .mainContent {
 
@@ -1571,6 +1574,7 @@ $in-w: $n-char*($char-w + $gap);
     }
 
     .topItems {
+      grid-template-columns: auto;
 
       .Items {
 
@@ -1591,3 +1595,40 @@ $in-w: $n-char*($char-w + $gap);
 
 }
 
+
+@media screen and (max-width: 450px) {
+
+  .mainContent {
+
+    .companyTitle {
+      font-size: 25px;
+
+      span {
+
+      }
+    }
+
+    .topItems {
+      grid-template-columns: auto;
+
+      .Items {
+        width: 200px;
+        font-size: 14px;
+
+        &:after {
+
+        }
+
+
+      }
+    }
+
+    .MainItem {
+
+      h3 {
+
+      }
+    }
+  }
+
+}
