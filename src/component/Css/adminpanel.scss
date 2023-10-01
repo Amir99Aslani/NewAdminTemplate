@@ -38,6 +38,19 @@ body {
   padding: 0px;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn{
+  animation: fadein 1.2s;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -108,6 +121,18 @@ input[type=number] {
       position: relative;
       padding: 10px 0;
       text-align: center;
+      cursor: pointer;
+      overflow: hidden;
+      height: 50px;
+
+      &:before {
+        content: 'تاریخ و ساعت';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+      }
 
       &:after {
         content: '';
@@ -120,8 +145,34 @@ input[type=number] {
         background-size: 100%;
         background: linear-gradient(90deg, #121F31 -2.97%, #282D39 48.04%, #121F31 101.23%);
         filter: drop-shadow(0px 0px 61px rgba(0, 0, 0, 0.50));
+        transition: transform 980ms cubic-bezier(0.2, 0.1, 0.15, 1.32);
       }
 
+      .Title__highlight {
+        content: '';
+        position: absolute;
+        width: 100%;
+        bottom: -50px;
+        left: 0;
+        height: 50px;
+        background: linear-gradient(90deg, #121F31 -2.97%, #282D39 48.04%);
+        filter: brightness(1.3);
+        transition: transform 400ms ease;
+        z-index: 5;
+      }
+
+      &:hover:after {
+        transform: translateY(-2.8em);
+      }
+
+      &:hover:before {
+        content: 'Amir is the best';
+        animation: fadein 1.6s;
+      }
+
+      &:hover .Title__highlight {
+        transform: translateY(-9.2em);
+      }
 
     }
   }
@@ -139,21 +190,7 @@ input[type=number] {
   }
 }
 
-.card-body {
-  min-width: 400px;
-  min-height: 300px;
-  margin: 20px 50px;
-  border-radius: 60px;
-  background-image: linear-gradient(137deg, rgba(52, 56, 66, 1) 0%, rgba(25, 31, 45, 1) 100%);
-  box-shadow: 0px 0px 25px rgba(9, 12, 17, 0.3);
-  padding: 20px 10px;
-  position: relative;
-}
 
-.addressModalTitle {
-  text-align: center;
-  font-family: admin-panel-farsi;
-}
 
 /* Table Styles ******************************************************************************************************************************************/
 
@@ -1079,431 +1116,6 @@ $in-w: $n-char*($char-w + $gap);
 
 //***********************************************************************************************************************************************************
 
-.filterSelect {
-  position: relative;
-  direction: rtl;
-
-  div {
-
-    label {
-      font-family: admin-panel-farsi;
-      position: absolute;
-      top: -50%;
-      width: 100%;
-    }
-
-    label.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root {
-      transform: translate(0, -18.5px) scale(0.75);
-    }
-
-    div {
-      margin: 0;
-    }
-  }
-
-  div {
-    margin: 0;
-    font-family: admin-panel-farsi;
-    font-size: 12px;
-  }
-}
-
-.dateTime {
-  min-width: 300px;
-}
-
-.TimeContainer {
-  color: #ffffff;
-  font-family: digital-7;
-  margin: auto;
-  text-align: center;
-  font-size: 50px;
-}
-
-.cardInfoTitle {
-  font-family: admin-panel-farsi;
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  margin: 11px 0;
-}
-
-.cardInfoData {
-  color: #ffffff;
-  font-family: digital-7;
-  margin: auto;
-  font-size: 50px;
-  text-align: center;
-  margin: 11px 0;
-}
-
-.dateTime .persian-cal {
-  margin: 30px;
-  width: 20%;
-  background-color: #ffffff;
-  border-radius: 8px;
-}
-
-.dateTime .persian-cal .react-persian-j-calendar {
-  font-family: admin-panel-farsi;
-  border-radius: 8px;
-}
-
-.dateTime .persian-cal .react-persian-j-calendar .calendar_row .calendar_item.selected {
-  background-color: #d81c1c;
-}
-
-.dateTime .persian-cal .react-persian-j-calendar .calendar_row .calendar_item {
-  width: 40px;
-}
-
-.infoCards {
-  display: flex;
-  justify-content: space-around;
-}
-
-.infoCards div {
-  border-radius: 8px;
-  min-width: 22%;
-  min-height: 130px;
-
-}
-
-.infoCards div:nth-child(4) {
-  background-color: #e55352;
-}
-
-.infoCards div:nth-child(3) {
-  background-color: #f9b116;
-}
-
-.infoCards div:nth-child(2) {
-  background-color: #3399ff;
-}
-
-.infoCards div:nth-child(1) {
-  background-color: #321fdb;
-  display: flex;
-}
-
-.mapboxgl-map {
-  max-height: 500px !important;
-
-  width: auto !important;
-}
-
-.mapContainer {
-  margin: 50px;
-  position: relative;
-}
-
-.custom-button {
-  position: absolute;
-}
-
-
-.workTimes {
-  margin: 3px;
-  min-width: 45px;
-  background-color: rgba(144, 144, 144, 0.7);
-  cursor: pointer;
-  font-family: admin-panel-farsi;
-  box-shadow: none;
-  border: none;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.workTimes:hover {
-  background-color: #00cc99;
-  cursor: pointer;
-  color: #fff;
-}
-
-.workTimes.active {
-  margin: 3px;
-  background-color: #00cc99;
-  color: #fff;
-}
-
-.workTimes.active:hover {
-  background-color: rgba(144, 144, 144, 0.7);
-}
-
-.copyRight {
-  font-family: admin-panel-farsi;
-  font-size: 10px;
-  max-width: 180px;
-  margin: 50px auto auto auto;
-  text-align: center;
-  color: #7f7f7f;
-}
-
-.copyRight.version {
-  margin: 10px auto;
-}
-
-.WorkTimeFormSubmit {
-  margin: 40px auto;
-  padding: 0 20px;
-  background-color: #08d;
-  border-radius: 12px;
-  border: 0;
-  box-sizing: border-box;
-  color: #eee;
-  cursor: pointer;
-  font-size: 18px;
-  height: 50px;
-  text-align: center;
-  font-family: admin-panel-farsi;
-
-  &:hover {
-    filter: brightness(1.3);
-  }
-
-  &:active {
-    background-color: #06b;
-  }
-}
-
-.LocaStatusBtn {
-  width: 50px;
-  height: 50px;
-
-  &.active {
-    background-color: #2b8a65;
-  }
-
-  &.deActive {
-    background-color: #8a2b2b;
-  }
-
-  border-radius: 12px;
-  border: 0;
-  box-sizing: border-box;
-  color: #eee;
-  cursor: pointer;
-  font-size: 18px;
-  text-align: center;
-  font-family: admin-panel-farsi;
-  position: relative;
-
-  svg {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1.3);
-  }
-
-  &:hover {
-    filter: brightness(1.3);
-    animation: rotate 0.7s ease-in-out both;
-  }
-
-  &:active {
-    background-color: #06b;
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg) translate3d(0, 0, 0)
-  }
-  25% {
-    transform: rotate(3deg) translate3d(0, 0, 0)
-  }
-  50% {
-    transform: rotate(-3deg) translate3d(0, 0, 0)
-  }
-  75% {
-    transform: rotate(1deg) translate3d(0, 0, 0)
-  }
-  100% {
-    transform: rotate(0deg) translate3d(0, 0, 0)
-  }
-}
-
-.mapContainer {
-  position: relative;
-
-}
-
-.mapboxgl-ctrl-group button + button {
-  border-top: 1px solid #ddd;
-}
-
-.mapboxgl-ctrl-group button {
-  top: 5px;
-  right: 5px;
-  background-color: rgb(167, 24, 91);
-  color: white;
-  border: 0;
-  padding: 10px;
-  border-radius: 5px;
-  font-family: admin-panel-farsi;
-  display: block;
-  min-width: 100px;
-}
-
-.mapboxgl-ctrl-group button:hover {
-  filter: brightness(1.2);
-  cursor: pointer;
-}
-
-.activeArea {
-  border: #e55352 2px dashed;
-}
-
-.mapboxgl-ctrl-group .mapbox-gl-draw_trash::before {
-  content: "حذف ترسیمات"
-}
-
-.mapboxgl-ctrl-group .mapbox-gl-draw_polygon::before {
-  content: "ترسیم"
-}
-
-.mapboxgl-ctrl-group .mapbox-gl-draw_point::before {
-  content: "ذخیره ترسیم"
-}
-
-.mapbox-gl-draw_ctrl-draw-btn {
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.mapboxgl-ctrl-group.mapboxgl-ctrl {
-  position: absolute;
-  z-index: 2000;
-  top: 0;
-  left: 0;
-  display: block;
-}
-
-.mapboxgl-ctrl-group .mapbox-gl-draw_uncombine, .mapboxgl-ctrl-group .mapbox-gl-draw_combine, .mapboxgl-ctrl-group .mapbox-gl-draw_line, .mapboxgl-ctrl {
-  display: none;
-}
-
-.add-poly, .add-img, .remove-img {
-  top: 5px;
-  right: 5px;
-  background-color: rgb(167, 24, 91);
-  color: white;
-  border: 0;
-  padding: 10px;
-  border-radius: 5px;
-  font-family: admin-panel-farsi;
-  margin: auto;
-}
-
-.add-poly:hover, .add-img:hover, .remove-img:hover {
-  filter: brightness(1.3);
-  cursor: pointer;
-}
-
-.remove-img {
-  background-color: rgb(167, 24, 24);
-  margin: 0 5px;
-}
-
-.remove {
-  top: 5px;
-  left: 5px;
-  background-color: rgb(167, 24, 91);
-  color: white;
-  border: 0;
-  padding: 10px;
-  border-radius: 5px;
-  font-family: admin-panel-farsi;
-}
-
-.deleteText {
-  color: #ffff;
-  font-family: admin-panel-farsi;
-  margin: 15px 0;
-}
-
-.currentOrderTitle {
-  font-family: admin-panel-farsi;
-  text-align: center;
-  color: #ffffff;
-}
-
-.errorText, .bnPC-hover {
-  font-family: admin-panel-farsi;
-}
-
-.ImageContainer {
-  min-height: 185px;
-  display: flex;
-  justify-content: center;
-
-
-  p {
-    font-family: admin-panel-farsi;
-    margin: auto;
-    color: #FFFFFF;
-  }
-}
-
-.showImageContainer {
-  min-height: 185px;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 20px;
-
-  img {
-    width: 200px;
-    height: 200px;
-  }
-
-  p {
-    font-family: admin-panel-farsi;
-    margin: auto;
-    color: #FFFFFF;
-  }
-}
-
-.putImageContainer {
-  min-height: 185px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 20px;
-
-  .imgCon {
-    position: relative;
-
-    svg {
-      position: absolute;
-      stroke: #FFFFFF;
-      fill: #FFFFFF;
-      width: 25px;
-      height: 25px;
-      background-color: #444448;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
-
-
-  img {
-    width: 150px;
-    height: 150px;
-  }
-
-  p {
-    font-family: admin-panel-farsi;
-    margin: auto;
-    color: #FFFFFF;
-  }
-}
-
-.ImageContainer img {
-  height: 185px;
-  width: 185px;
-  border: 3px solid #f5f5f5;
-  border-radius: 10px;
-}
 
 //***********************************************************************************************************************************************************
 

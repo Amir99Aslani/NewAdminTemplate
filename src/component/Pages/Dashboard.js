@@ -45,8 +45,16 @@ function Dashboard(props) {
 
                         {sideNavTest.length === 0 ?
                             <div className="topItems">
-                                <div className="Items">
-                                    تاریخ و ساعت
+                                <div className="Items" onMouseEnter={(event) => {
+                                    event.currentTarget.classList = "Items "
+                                }} onMouseLeave={(event) => {
+                                    event.currentTarget.classList = "Items fadeIn"
+                                }}>
+
+                                    <p>
+                                        <div className="Title__highlight"></div>
+                                    </p>
+                                    <div className="Title__underline"></div>
                                 </div>
                                 <div className="Items">سامانه مدیریت بازرسی آسانسور</div>
                                 <div className="Items">سامانه تایید شرکت برق</div>

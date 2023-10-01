@@ -371,13 +371,13 @@
       transition: min-width .4s;
     }
 
-    @for $i from 1 through 11 {
+    @for $i from 1 through 12 {
 
       &:nth-of-type(#{$i}):hover {
         color: #FFFFFF;
 
         & ~ #nav-content-highlight {
-          top: ($i - 1) * 45 + 16px;
+          top: ($i - 1) * 45 + 12px;
         }
       }
     }
