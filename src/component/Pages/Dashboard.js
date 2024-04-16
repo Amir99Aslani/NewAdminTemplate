@@ -35,13 +35,6 @@ function Dashboard(props) {
                         }}
                     >
                         <br/>
-                        <h1 className="companyTitle">
-                            شرکت کاوش اندیشه رستگار
-                            <br/>
-                            <span>
-                    شعبه خراسان رضوی
-                    </span>
-                        </h1>
 
                         {sideNavTest.length === 0 ?
                             <div className="topItems">
