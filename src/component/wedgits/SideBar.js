@@ -1,17 +1,28 @@
-import React from 'react';
+import React, {useCallback, useContext, useState} from 'react';
 import "../Css/SideBar.scss";
 import {PiArrowSquareInDuotone, PiArrowSquareOutDuotone, PiElevatorFill} from "react-icons/pi";
 import {BiNews, BiSolidMessageRoundedDetail} from "react-icons/bi";
 import {GrInProgress} from "react-icons/gr";
-import {IoCheckmarkDoneCircleSharp} from "react-icons/io5";
+import {IoCheckmarkDoneCircleSharp, IoMenu, IoQrCodeOutline} from "react-icons/io5";
 import {GiElectricalResistance} from "react-icons/gi";
 import {BsCardChecklist} from "react-icons/bs";
 import useWindowDimensions from "./useWindowDimensions";
 import {AiFillHome} from "react-icons/ai";
+import DashboardIco from "../Css/Ico/DashboardIco";
+import {MdOutlineRestaurantMenu} from "react-icons/md";
+import {FaTags} from "react-icons/fa";
+import axios from "axios";
+import {LoginContext} from "../../Root";
+import {Theme} from "./ThemeContext";
 
 function SideBar(props) {
 
     const {height, width} = useWindowDimensions();
+
+    const {isLoggedIn, setIsLoggedIn} = useContext(LoginContext);
+    const theme = useContext(Theme);
+    const [isLoading, setIsloading] = useState(false);
+    const [error, setError] = useState(null);
 
 
     return (
@@ -25,128 +36,46 @@ function SideBar(props) {
                         Vira
                     </a>
                     <label htmlFor="nav-toggle">
-                        <span id="nav-toggle-burger"/>
+                        <IoMenu />
                     </label>
 
                 </div>
                 <div id="nav-content">
                     <>
-                        <div className="nav-button"    onClick={() => {
-                            props.onSetSideNavTest("");
+                        <div className="nav-button" onClick={() => {
+                            props.ondistributeData("");
                         }}>
-                            <i className="fas "> <AiFillHome /></i>
+                            <i className="fas "> <DashboardIco/></i>
                             <span>داشبورد</span>
                         </div>
-                        <div className="nav-button">
-                            <i className="fas "> <PiElevatorFill/></i>
-                            <span>آسانسور</span>
-                        </div>
-                        <div className="nav-button subMenu"
-                        onClick={() => {
-                            props.onSetSideNavTest("اخبار");
-                        }}
-                        >
-                            <i className="fas "> <BiNews/></i>
-                            <span>اخبار</span>
+                        <div className="nav-button"
+                             onClick={() => {
+                                 props.ondistributeData("menu");
+                             }}>
+                            <i className="fas "> <MdOutlineRestaurantMenu/></i>
+                            <span>منو</span>
                         </div>
                         <div className="nav-button subMenu"
                              onClick={() => {
-                                 props.onSetSideNavTest(" درحال انجام");
+                                 props.ondistributeData("tag");
                              }}
                         >
-                            <i className="fas "> <GrInProgress/></i>
-                            <span> درحال انجام</span>
+                            <i className="fas "> <FaTags /></i>
+                            <span>لیست تگ ها</span>
                         </div>
-                        <div className="nav-button subMenu"
-                             onClick={() => {
-                                 props.onSetSideNavTest("صادر شده");
-                             }}
-                        >
-                            <i className="fas "> <IoCheckmarkDoneCircleSharp/></i>
-                            <span>صادر شده</span>
-                        </div>
-                    </>
 
-                    <>
-                        <div className="nav-button">
-                            <i className="fas "> <GiElectricalResistance/></i>
-                            <span>تابلو برق</span>
-                        </div>
-                        <div className="nav-button subMenu"
-                            onClick={() => {
-                                 props.onSetSideNavTest("درخواست اولیه");
-                             }}
-                        >
-                            <i className="fas "> <BsCardChecklist/></i>
-                            <span>درخواست اولیه</span>
-                        </div>
-                        <div className="nav-button subMenu"
-                            onClick={() => {
-                                 props.onSetSideNavTest("درحال انجام");
-                             }}
-                        >
-                            <i className="fas "> <GrInProgress/></i>
-                            <span>درحال انجام</span>
-                        </div>
-                        <div className="nav-button subMenu"
-                            onClick={() => {
-                                 props.onSetSideNavTest("پایان یافته");
-                             }}
-                        >
-                            <i className="fas "> <IoCheckmarkDoneCircleSharp/></i>
-                            <span>پایان یافته</span>
-                        </div>
-                    </>
-
-                    <>
-                        <div className="nav-button">
-                            <i className="fas "> <BiSolidMessageRoundedDetail/></i>
-                            <span>پیام</span>
-                        </div>
-                        <div className="nav-button subMenu" onClick={() => {
-                            props.onSetSideNavTest("ورودی");
-                        }}>
-                            <i className="fas "> <PiArrowSquareInDuotone/></i>
-                            <span>ورودی</span>
-                        </div>
-                        <div className="nav-button subMenu" onClick={() => {
-                            props.onSetSideNavTest("خروجی");
-                        }}>
-                            <i className="fas "> <PiArrowSquareOutDuotone/></i>
-                            <span>خروجی</span>
-                        </div>
                     </>
 
 
                     <div id="nav-content-highlight"/>
+
+                    <button className="getQRBtn nav-button" >
+                        <i className="fas "> <IoQrCodeOutline /></i>
+                        <span>دریافت QR کد</span>
+                    </button>
                 </div>
                 <input id="nav-footer-toggle" type="checkbox"/>
-                {/*<div id="nav-footer">*/}
-                {/*    <div id="nav-footer-heading">*/}
-                {/*        <div id="nav-footer-avatar">*/}
-                {/*            <img src="https://gravatar.com/avatar/4474ca42d303761c2901fa819c4f2547"/>*/}
-                {/*        </div>*/}
-                {/*        <div id="nav-footer-titlebox">*/}
-                {/*            <a*/}
-                {/*                id="nav-footer-title"*/}
-                {/*                href="https://codepen.io/uahnbu/pens/public"*/}
-                {/*                target="_blank"*/}
-                {/*            >*/}
-                {/*                uahnbu*/}
-                {/*            </a>*/}
-                {/*            <span id="nav-footer-subtitle">Admin</span>*/}
-                {/*        </div>*/}
-                {/*        <label htmlFor="nav-footer-toggle">*/}
-                {/*            <i className="fas fa-caret-up"/>*/}
-                {/*        </label>*/}
-                {/*    </div>*/}
-                {/*    <div id="nav-footer-content">*/}
-                {/*        <lorem>*/}
-                {/*            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor*/}
-                {/*            incididunt ut labore et dolore magna aliqua.*/}
-                {/*        </lorem>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
+
             </div>
         </>
     );

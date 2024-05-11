@@ -5,13 +5,16 @@ import reportWebVitals from './reportWebVitals';
 import Root from "./Root";
 import {BrowserRouter} from "react-router-dom";
 import {Toaster} from "react-hot-toast";
+import ThemeContext from "./component/wedgits/ThemeContext";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Root />
-      <Toaster/>
-  </BrowserRouter>
+    <ThemeContext>
+        <BrowserRouter>
+            <Root/>
+            <Toaster/>
+        </BrowserRouter>
+    </ThemeContext>
 );
 
 // If you want to start measuring performance in your app, pass a function
