@@ -1,10 +1,13 @@
 import React, {useCallback, useEffect, useState, useRef, useContext} from 'react';
-import "../Css/LoiIn.css";
+import "../Css/LoiIn.scss";
 import axios from "axios";
 import toast, {Toaster} from "react-hot-toast";
 import {useNavigate} from "react-router-dom";
 import {LoginContext} from "../../Root";
 import {CircularProgress} from "@mui/material";
+import ThemeIcoLight from "../Css/Ico/ThemeIcoLight";
+import ThemeIcoDark from "../Css/Ico/ThemeIcoDark";
+import {Theme} from "../wedgits/ThemeContext";
 
 function LogIn(props) {
 
@@ -14,6 +17,8 @@ function LogIn(props) {
     const [firstStep, setFirstStep] = useState(true);
     const [error, setError] = useState(null);
     const {isLoggedIn, setIsLoggedIn} = useContext(LoginContext);
+
+    const theme = useContext(Theme);
 
     const UsernameRef = useRef("");
     const PasswordRef = useRef("");
@@ -109,21 +114,39 @@ function LogIn(props) {
 
     return (
         <div className="container">
+
+            <div className="logInNavBar">
+                <div className="logoContainer" style={{backgroundImage:`url(lol)`}}></div>
+                <div className="themeController">
+                    <button onClick={theme.themeChanger}>
+                        {theme.theme === "light" ? <ThemeIcoLight /> : <ThemeIcoDark/>}
+                    </button>
+                </div>
+            </div>
+
             <div className="LogInContainer">
 
                 <form className="LogInForm" onSubmit={firstStep ? SendCode : LogIn}>
-                    {firstStep ? <div>
-                        <label>شماره همراه</label>
-                        <input type="text" ref={phoneNumberRef} value={phoneNumber} onChange={(e) => {
-                            setPhoneNumber(e.target.value)
-                        }}/>
-                    </div>
-                    :
-                        <div>
-                            <label htmlFor="">کد ارسال شده</label>
-                            <input type="password" ref={PasswordRef} value={password} onChange={(e) => {
-                                setPassword(e.target.value)
-                            }}/>
+                    {firstStep ? <div className="container">
+                            <h4>شماره همراه</h4>
+                            <input className="phoneNumber"
+                                   maxLength='11'
+                                   placeholder='09*********'
+                                   autoComplete="off" type="text" ref={phoneNumberRef} value={phoneNumber}
+                                   onChange={(e) => {
+                                       setPhoneNumber(e.target.value)
+                                   }}/>
+                        </div>
+                        :
+                        <div className="container">
+                            <h4>کد ارسال شده</h4>
+                            <input className="code"
+                                   maxLength='6'
+                                   placeholder='123456'
+                                   autoComplete="off" type="password" ref={PasswordRef} value={password}
+                                   onChange={(e) => {
+                                       setPassword(e.target.value)
+                                   }}/>
                         </div>
                     }
 
@@ -133,22 +156,66 @@ function LogIn(props) {
                     {/*    <input type="text"/>*/}
                     {/*</div>*/}
                     {/*<button type="button" className="button1">استفاده از کلید سخت افزاری</button>*/}
-                    {isLoading ?
-                        <button type="button" className="button2" disabled={isLoading}><CircularProgress/></button> :
-                        (
-                            firstStep ?
-                                <button type="submit"
-                                        className="button2" disabled={isLoading}>ارسال کد</button>
-                                :
-                                <button type="submit"
-                                        className="button2" disabled={isLoading}>ورود</button>
-                        )
 
-
-                    }
+                    <div className="btnContainer">
+                        {isLoading ?
+                            <button type="button" className="button2" disabled={isLoading}><CircularProgress size={20}/>
+                            </button> :
+                            (
+                                firstStep ?
+                                    <button type="submit"
+                                            className="button2" disabled={isLoading}>
+                                        <span>
+                                            ارسال کد
+                                        </span>
+                                    </button>
+                                    :
+                                    <button type="submit"
+                                            className="button2" disabled={isLoading}>
+                                        <span>
+                                            ورود
+                                        </span>
+                                    </button>
+                            )
+                        }
+                    </div>
 
                 </form>
             </div>
+            {/*<div className="LogInContainer">*/}
+
+            {/*    <form className="LogInForm" onSubmit={firstStep ? SendCode : LogIn}>*/}
+
+            {/*        <div className="UPContainer">*/}
+            {/*            <h4>UserName :</h4>*/}
+            {/*            <input className="input"*/}
+            {/*                   maxLength='11'*/}
+            {/*                   placeholder='09*********'*/}
+            {/*                   autoComplete="off" type="text"/>*/}
+            {/*        </div>*/}
+            {/*        <div className="UPContainer">*/}
+            {/*            <h4>Password :</h4>*/}
+            {/*            <input className="input"*/}
+            {/*                   maxLength='11'*/}
+            {/*                   placeholder='09*********'*/}
+            {/*                   autoComplete="off" type="text" />*/}
+            {/*        </div>*/}
+
+            {/*        <div className="btnContainer">*/}
+            {/*            {isLoading ?*/}
+            {/*                <button type="button" className="button2" disabled={isLoading}><CircularProgress size={20}/>*/}
+            {/*                </button> :*/}
+            {/*                        <button type="submit"*/}
+            {/*                                className="button2" disabled={isLoading}>*/}
+            {/*                            <span>*/}
+            {/*                                ورود*/}
+            {/*                            </span>*/}
+            {/*                        </button>*/}
+            {/*            }*/}
+            {/*        </div>*/}
+
+            {/*    </form>*/}
+            {/*</div>*/}
         </div>
 
     );
