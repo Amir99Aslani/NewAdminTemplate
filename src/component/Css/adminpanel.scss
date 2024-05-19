@@ -33,6 +33,10 @@
   src: url("font/kalameh/Epic Kalameh-Medium.ttf") ;
 }
 
+.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
+  font-family: kalamehMedium;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -58,7 +62,8 @@ body {
   li {
     font-family: kalamehMedium;
   }
-  div{
+
+  div {
     font-family: kalamehMedium;
   }
 }
@@ -192,12 +197,52 @@ input[type=number] {
   overflow: hidden;
   margin: auto;
   border-radius: 10px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 50%;
+  grid-gap: 10px;
 
-  div {
+  img {
     width: 100%;
     height: 100%;
-    margin: auto;
+    border-radius: 20px;
+  }
+}
+
+.mapContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+}
+
+.fileInfoContainer {
+  .row {
+    display: flex;
+    justify-content: space-around;
+    direction: rtl;
+
+    p {
+      font-family: KalamehMedium;
+      font-size: 18px;
+      font-weight: 600;
+      width: 150px;
+      text-align: center;
+    }
+
+    input {
+      font-family: KalamehMedium;
+      font-size: 18px;
+      width: 150px;
+      text-align: center;
+    }
   }
 }
 
@@ -210,6 +255,7 @@ input[type=number] {
       margin: auto;
       text-align: center;
       font-family: kalamehMedium;
+      font-weight: 600;
     }
 
     img {
@@ -273,6 +319,34 @@ input[type=number] {
   width: 100%;
   padding: 25px;
   transition: all 0.3s ease-in-out;
+
+  .themeContainer {
+    display: flex;
+
+    .themeController {
+      margin: auto auto auto 20px;
+
+      button {
+        background-color: transparent;
+        display: flex;
+        width: 45px;
+        height: 45px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          filter: opacity(0.5);
+        }
+
+        svg {
+          margin: auto;
+        }
+      }
+    }
+
+  }
 
   .panelTitle {
     font-family: kalamehMedium;
@@ -351,7 +425,7 @@ input[type=number] {
           filter: opacity(0.5);
         }
 
-        svg{
+        svg {
           stroke: #FFFFFF;
         }
       }
@@ -668,6 +742,26 @@ input[type=number] {
       position: relative;
       margin: 10px 0;
 
+      .uploadedImagesContainer {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+
+        .uploadedImages {
+          width: 80px;
+          height: 80px;
+          border: #FFFFFF 3px solid;
+          border-radius: 15px;
+          margin: 10px 0;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+          }
+        }
+      }
+
+
       label {
         font-family: kalamehMedium;
         margin: 0 auto;
@@ -767,7 +861,7 @@ input[type=number] {
         padding: 10px 15px;
 
         &::placeholder {
-          color: #9E9CFF;
+          color: rgba(148, 147, 147, 0.6);
         }
       }
 
@@ -799,6 +893,14 @@ input[type=number] {
       }
     }
 
+    .radioContainer {
+      label {
+        font-family: kalamehMedium;
+        margin: 0 auto;
+        color: #544287;
+      }
+    }
+
     .w-md-editor-toolbar {
       background-color: #303245;
 
@@ -823,7 +925,7 @@ input[type=number] {
       font-family: kalamehMedium;
 
       &::placeholder {
-        color: #9E9CFF;
+        color: rgba(148, 147, 147, 0.6);
       }
     }
 
@@ -904,6 +1006,10 @@ input[type=number] {
   &:active,
   &:focus {
     filter: blur(0px) opacity(1);
+  }
+
+  &:disabled {
+    filter: blur(0px) opacity(0.5);
   }
 }
 
@@ -1121,6 +1227,11 @@ $bp-homer: 75em;
         &:hover {
           cursor: pointer;
           filter: brightness(1.3);
+        }
+
+        &:disabled {
+          filter: opacity(0.3);
+          cursor: auto;
         }
       }
     }

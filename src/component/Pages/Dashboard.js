@@ -5,6 +5,9 @@ import 'react-spring-modal/styles.css';
 import Scrollbars from "react-custom-scrollbars-2";
 import SideBar from "../wedgits/SideBar";
 import useWindowDimensions from "../wedgits/useWindowDimensions";
+import {Theme} from "../wedgits/ThemeContext";
+import ThemeIcoLight from "../Css/Ico/ThemeIcoLight";
+import ThemeIcoDark from "../Css/Ico/ThemeIcoDark";
 
 function Dashboard(props) {
 
@@ -13,6 +16,8 @@ function Dashboard(props) {
     const [sideNavTest, setSideNavTest] = useState("");
 
     const {height, width} = useWindowDimensions();
+    const theme = useContext(Theme);
+    const [distributeData, setDistributeData] = useState("");
 
     useEffect(() => {
     }, []);
@@ -22,55 +27,23 @@ function Dashboard(props) {
         <div id="background">
             <div id="firstbox">
                 <SideBar
-                    onSetSideNavW={setSideNavW}
-                    onSetSideNavTest={setSideNavTest}
+                    onSetSideNavW={setSideNavW} ondistributeData={distributeData}
+                    onSetSideNavTest={setSideNavTest} onSetdistributeData={setDistributeData}
                 />
                 <div className="mainContent"
                      style={width > 400 ? {width: sideNavW ? "90%" : "78%"} : {width: sideNavW ? "80%" : "68%"}}>
-                    < Scrollbars
-                        autoHide
-                        autoHideTimeout={1000}
-                        style={{
-                            scrollbarColor: "#fff"
-                        }}
-                    >
-                        <br/>
+                    <div className="themeContainer">
+                        <div className="themeController">
+                            <button onClick={theme.themeChanger}>
+                                {theme.theme === "light" ? <ThemeIcoLight /> : <ThemeIcoDark/>}
+                            </button>
+                        </div>
+                    </div>
 
-                        {sideNavTest.length === 0 ?
-                            <div className="topItems">
-                                <div className="Items" onMouseEnter={(event) => {
-                                    event.currentTarget.classList = "Items "
-                                }} onMouseLeave={(event) => {
-                                    event.currentTarget.classList = "Items fadeIn"
-                                }}>
-
-                                    <p>
-                                        <div className="Title__highlight"></div>
-                                    </p>
-                                    <div className="Title__underline"></div>
-                                </div>
-                                <div className="Items">سامانه مدیریت بازرسی آسانسور</div>
-                                <div className="Items">سامانه تایید شرکت برق</div>
-                                <div className="Items">ثبت درخواست اداری</div>
-                            </div>
-                            :
-                            <div className="MainItem">
-                                <h3 className="Items">
-                                    {sideNavTest}
-                                </h3>
-                            </div>
-                        }
-
-
-
-                    </Scrollbars>
                 </div>
             </div>
-
         </div>
-
-    )
-        ;
+    );
 }
 
 export default Dashboard;
